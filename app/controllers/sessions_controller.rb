@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
         authorized_user = found_user.authenticate(params[:password])
         if authorized_user
           login_user(authorized_user)
-          redirect_to user_path(authorized_user)
+          redirect_to user_accounts_path(authorized_user)
         else
           redirect_to root_path
         end
